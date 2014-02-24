@@ -3,7 +3,7 @@
 CUR=`pwd`
 TOPDIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )/.." && pwd )"
 
-HOSTNAME=${1:-open4us.org}
+HOSTNAME=${1:-openpolicynetwork.org}
 DBNAME=${2:-wordpress}
 DBUSER=${3:-dbuser}
 DBPASS=${4:-}
