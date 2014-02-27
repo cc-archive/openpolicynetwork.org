@@ -1,0 +1,139 @@
+/*
+ Theme Name:   OPN Custom
+ Theme URI:    http://example.com/pinboard-child/
+ Description:  Customized from Pinboard, for the Open Policy Network. See the (private) Admin Notes page for more detail on using this theme.
+ Template:     pinboard
+ Version:      1.0.0
+ Author:       Monique & Paul
+ Tags:         fluid-width, centered-content, blue, white, grey, one-column, responsive-layout, accessibility-ready
+ Text Domain:  pinboard-child
+*/
+
+@import url("../pinboard/style.css");
+
+/* =Theme customization starts here
+-------------------------------------------------------------- */
+
+
+/* size and position header components */
+#site-title,
+#site-description {	
+	line-height:8px;
+        margin: 1%;
+        padding-left: 15px;
+        padding-bottom: 0px;      
+        font-size: larger;
+        clear: left;
+        text-align:left;
+}	
+#site-description  { color: #ffffff !important; }
+#site-title a img { margin: 0;}
+#header { background-color: #4BA9E7; }
+#header #searchform { margin: 0px 20px 12px 3px; }
+#header input#s { 
+    border-radius: 0px; 
+    width: 140px;
+}
+
+
+/* menu - reduced padding */
+#access a {
+    padding-left: 14px;
+    padding-right: 14px;
+}
+	
+
+/* Shift slider title and controls down, and darken title background */
+#slider .entry-title {
+  top: 60%;
+  font-weight: bold;
+}
+.flex-direction-nav, .flex-pauseplay { bottom: 4%; }
+#slider .entry-title a { background: rgba(0, 0, 0, 0.4); }
+
+/* Home page - hide content box - specific post id */
+#post-10 { display: none; }
+
+
+/* Full width edits */
+#nav-content {
+   background-color: #333
+}
+nav#access {
+   margin-left: auto;
+   margin-right: auto;
+   width: 724px;
+}
+
+#wrapper { 
+   box-shadow: none; 
+   -webkit-box-shadow: none;
+   -moz-box-shadow: none;  
+   max-width: 100%;      
+}
+
+#header-content {
+   width: 750px;
+   margin-left: auto;
+   margin-right: auto;
+}
+
+#content, #slider, #footer-area {
+   max-width: 724px;
+   margin-left: auto;
+   margin-right: auto;
+   float: none;   
+}
+ #slider { 
+   margin-top: 3%;
+ }
+
+
+/* Hide sticky posts on the blog page */
+.blog #slider { display: none; }
+
+
+/* Custom page-level link tags */
+.page-contents-menu a {    
+    background-color: #EAEAEA;
+    color: #333;
+    font-size: 12px;
+    margin-right: 8px;
+    padding: 1px 6px 1px 6px;
+}
+
+
+/* Hide page titles */
+.single .entry-title, .page .entry-title, .error404 .entry-title  { display:none; }
+
+
+.single .entry,
+.page .entry,
+.error404 .entry {
+    margin-bottom: 2%;
+    padding-bottom: 5px;
+}
+
+
+/* Blog posts - hide author and category */
+#entry-author-link, #entry-category {
+  display: none;  
+}
+
+
+/* Footer tweaks */
+.social-icon {
+   padding-right: 10px;
+}
+#footer-area { padding: 0; }
+#footer { background-color: #333; }
+#copyright { display:none; }
+
+
+
+/* Mobile customizations */
+@media screen and (max-width: 760px) {
+    #access .nav-show, #access a.nav-show:hover { left:2%; top:130px; }	
+    nav#access { width: 100%; }
+    
+}
