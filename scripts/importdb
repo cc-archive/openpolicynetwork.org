@@ -1,0 +1,12 @@
+#!/bin/bash
+
+PASS=${1}
+FILE=${2:-OPN\ database\ install\ script-\ MySql\ -\ WordPress.sql}
+DB=${2:-wordpress_opn}
+HOSTNAME=${3:-openpolicynetwork.org}
+
+for i in `mysqlshow -u root -p${PASS} "${DB}" | grep wp_ | sed -e 's/|//g'`; do
+    echo "drop table $i" | mysql -u root -p${PASS} "${DB}"
+done
+
+cat ${FILE} | sed -e "s|opn.construkto.com|${HOSTNAME}|g" | sed -e "s/admin@${HOSTNAME}/webmaster@creativecommons.org/" | mysql -u root -p${PASS} "${DB}"
