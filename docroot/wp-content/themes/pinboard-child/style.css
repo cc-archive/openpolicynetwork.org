@@ -103,9 +103,9 @@ nav#access {
 }
 
 
-/* Hide page titles */
-.single .entry-title, .page .entry-title, .error404 .entry-title  { display:none; }
-
+/* Hide page titles from search */
+/* .single .entry-title, .page .entry-title, .error404 .entry-title  { display:none; }
+*/
 
 .single .entry,
 .page .entry,
