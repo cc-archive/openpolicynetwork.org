@@ -5,3 +5,4 @@ docroot/wp-content/upgrade/*
 #docroot/wp-content/uploads/*
 docroot/sitemap.*
 docroot/wp-config-local.php
+.DS_Store
