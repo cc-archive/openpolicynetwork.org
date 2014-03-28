@@ -137,3 +137,21 @@ nav#access {
     nav#access { width: 100%; }
     
 }
+
+/**
+ *  Justin's Fixes
+ */
+body #header-content { padding-top: 10px; padding-bottom: 20px; } /* Increase padding of header to make content feel less compressed*/
+body #header #searchform { margin: -69px 20px 12px 3px; } /* Position search form in the top right */
+body #header input#s { padding: 8px 16px 8px 31px; } /* Ensure text doesn't overlap icon */
+body #nav-content { position: relative; } /* Ensure absolutely positioned child elements respect this bounding box */
+body #slider { margin: 0 auto; }
+body #container { margin: 0 }
+@media screen and ( max-width: 960px ) {
+  html body #container { margin: 0; }
+}
+@media screen and ( max-width: 760px ) {
+  html body #header #searchform { position: absolute; right: 140px; margin: -55px 0 0 0 !important; } /* Fix search form position at this screen width */
+  html body #access .nav-show { right: 40px; left: auto !important; top: -75px !important; }
+  html body #access:target .menu { margin-top: 0; }
+}
